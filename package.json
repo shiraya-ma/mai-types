@@ -2,6 +2,10 @@
   "name": "@shiraya-ma/mai-types",
   "version": "0.0.0",
   "types": "index.d.ts",
+  "exports": {
+    ".": "./index.d.ts",
+    "./post": "./post.d.ts"
+  },
   "private": true,
   "devDependencies": {
     "typescript": "^5"
