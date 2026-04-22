@@ -1,4 +1,4 @@
 
 export type Test = 'TEST';
 
-/// <reference path="./article.d.ts" />
+export * from './article';
