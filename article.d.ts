@@ -1,12 +1,4 @@
-
-export type SuccessResponse<T> = {
-  success: true;
-} & T;
-
-export type FailedResponse = {
-  success: false;
-  error: string;
-};
+import type { SuccessResponse, FailedResponse } from "./"
 
 // ##############################
 // 記事カテゴリ系
