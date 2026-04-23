@@ -24,14 +24,21 @@ export type ArticleCategory = {
 
 export type ArticleCategoryWithoutId = Omit<ArticleCategory, 'id'>;
 
+// GET /api/v1/public/articles/categories
+// 記事カテゴリのIDリストを取得する
+
+export type GetArticleCategoryIdsResponse = SuccessResponse<{
+  categoryIds: string[];
+}> | FailedResponse;
+
 // POST /api/v1/management/articles/categories
 // 記事のカテゴリを作成する
 
-export type PostArticlesCategoriesRequest = {
-  category: ArticleCategoryWithoutId;
+export type PostArticleCategoryRequest = {
+  category: ArticleCategory;
 };
 
-export type PostArticlesCategoriesResponse = SuccessResponse<{ categoryId: string; }> | FailedResponse;
+export type PostArticleCategoryResponse = SuccessResponse<{ categoryId: string; }> | FailedResponse;
 
 // GET /api/v1/public/articles/categories/:category_id
 // 記事のカテゴリを取得する
